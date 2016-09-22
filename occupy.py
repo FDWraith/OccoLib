@@ -48,6 +48,9 @@ ranges = set_ranges( dict["Percentages"] )
 
 for i in range(15):
     print pull_rand_occ( ranges, dict["Occupations"] )
-'''
+
 # print ranges
-    
+
+lines = get_file()
+print lines 
+'''

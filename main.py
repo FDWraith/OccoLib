@@ -6,16 +6,12 @@ app = Flask(__name__)
 @app.route("/")
 def home():
     body = ""
-    return render_template('base.html', bd = body)
+    return render_template('base.html', bd = body, d = [])
 
 @app.route("/occupations")
 def occupate():
-    lines = occupy.get_file()
-    dict = { "Occupations" : occupy.get_occs( lines ),
-             "Percentages" : occupy.get_pcts( lines ) }
-    
-    
-    return render_template('base.html', bd = "I don't know what goes here")
+    lines = occupy.get_file()    
+    return render_template('base.html', bd = "Here is a great table", d = lines)
 
 
 if __name__ == "__main__":

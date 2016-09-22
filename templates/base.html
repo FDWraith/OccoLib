@@ -7,5 +7,16 @@
 
   <body>
     <p>{{bd}}</p>
+    <table>
+    {% for pair in d %}
+    <tr>
+      {% for single in pair %}
+      <td>
+	{{single}}
+      </td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
   </body>
 </html>
