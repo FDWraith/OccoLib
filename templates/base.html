@@ -2,21 +2,29 @@
 <html>
   <head>
     <title>Your Future Job</title>
-    <h1>Occupation Hazard</h1>
+    <h1 style="text-align: center">Occupation Hazard</h1>
   </head>
 
   <body>
-    <p>{{bd}}</p>
-    <table>
+    <p style="text-align:center">{{bd}}</p>
+    <h3 style="text-align: center">{{header1}}</h3>
+    <table style="padding:4px; font-family: Sans-Serif; border: 5x solid black; border-radius: 5px;text-align: left;" align="center">
+      <tr style="font-size: 16px;">
+	<th style="text-align:left; padding:10px">Occupations</th>
+	<th style="text-align:right; padding:10px">Percentages</th>
+      </tr>
     {% for pair in d %}
-    <tr>
+    <tr style="border: 2px solid black; border-radius: 5px">
       {% for single in pair %}
-      <td>
+      <td style="padding:10px;">
 	{{single}}
       </td>
       {% endfor %}
     </tr>
     {% endfor %}
     </table>
+
+    <h3 style="text-align: center">{{header2}}</h3>
+    <p style="text-align: center">{{choice}}<p>
   </body>
 </html>
