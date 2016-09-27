@@ -1,10 +1,10 @@
 from flask import Flask, render_template
-import occupy
+from utils import occupy
 
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/occupations")
+@app.route("/occupations/")
 def occupate():
     lines = occupy.get_file()
     ranges = occupy.set_ranges(occupy.get_pcts(lines))
